@@ -52,6 +52,13 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 6rem 2rem;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: unset;
+    justify-content: space-between;
+    padding: 6rem 10rem;
+  }
 `;
 
 const Logo = styled.h1`
@@ -59,6 +66,10 @@ const Logo = styled.h1`
   font-size: 3.2rem;
   color: white;
   margin-bottom: 6rem;
+
+  @media only screen and (min-width: 768px) {
+    flex: 3;
+  }
 `;
 
 const Heading = styled.h1`
@@ -68,11 +79,19 @@ const Heading = styled.h1`
   color: white;
   margin-bottom: 2rem;
   text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    text-align: unset;
+  }
 `;
 
 const List = styled.ul`
   list-style-type: none;
   text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    text-align: unset;
+  }
 `;
 
 const Item = styled.li`
@@ -93,6 +112,12 @@ const Item = styled.li`
 
 const Section = styled.div`
   margin-bottom: 4rem;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 2rem;
+    flex: 1;
+  }
 `;
 
 const SocialLinks = styled.div`
@@ -110,5 +135,10 @@ const SocialLinks = styled.div`
     :hover {
       color: hsl(180, 66%, 49%);
     }
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 0;
+    flex: 1;
   }
 `;
