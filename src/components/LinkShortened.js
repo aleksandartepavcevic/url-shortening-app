@@ -1,13 +1,22 @@
-import React from 'react';
+import { hslToRgb } from '@material-ui/core';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const LinkShortened = () => {
+  const [buttonState, setButtonState] = useState(false);
+
+  const copyButton = () => {
+    buttonState === false ? setButtonState(true) : setButtonState(false);
+  };
+
   return (
     <Container>
       <LinkInput>https://www.facebook.com/</LinkInput>
       <ShortenContainer>
         <LinkShorten>https://www.fb.com/</LinkShorten>
-        <Button>Copy</Button>
+        <Button buttonState={buttonState} onClick={copyButton}>
+          {buttonState === false ? 'Copy' : 'Copied!'}
+        </Button>
       </ShortenContainer>
     </Container>
   );
@@ -68,7 +77,9 @@ const Button = styled.button`
   padding: 0.5em;
   border-radius: 10px;
   border: none;
-  background-color: hsl(180, 66%, 49%);
+  background-color: ${(props) =>
+    props.buttonState === true ? 'hsl(257, 27%, 26%)' : 'hsl(180, 66%, 49%)'};
+  cursor: pointer;
 
   @media only screen and (min-width: 768px) {
     margin-top: 0;

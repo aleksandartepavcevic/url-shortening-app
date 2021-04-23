@@ -34,7 +34,7 @@ export default LandingSection;
 const Container = styled.div`
   padding: 0 2rem;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1240px) {
     padding: 0 10rem;
   }
 `;

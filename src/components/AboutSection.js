@@ -38,7 +38,7 @@ const Container = styled.div`
   background-color: hsl(257, 10%, 93%);
   padding: 0 2rem 7rem 2rem;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1240px) {
     padding: 0 10rem 7rem 10rem;
   }
 `;
@@ -49,10 +49,10 @@ const CardContainer = styled.div`
 `;
 
 const CardContent = styled.div`
+  z-index: 1000;
+  position: relative;
   @media only screen and (min-width: 768px) {
     display: flex;
-    z-index: 1000;
-    position: relative;
   }
 `;
 
@@ -67,6 +67,12 @@ const Line = styled.span`
   width: 70%;
   height: 10px;
   background-color: hsl(180, 66%, 49%);
+
+  @media only screen and (max-width: 768px) {
+    width: 10px;
+    height: 70%;
+    top: 15%;
+  }
 `;
 
 const LinkShortererContainer = styled.div`
