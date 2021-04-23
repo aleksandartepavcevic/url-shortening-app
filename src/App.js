@@ -1,10 +1,16 @@
 import React from 'react';
-import Header from './components/Header';
+import AboutSection from './components/AboutSection';
+import BoostYourLink from './components/BoostYourLink';
+import LandingSection from './components/LandingSection';
 
 const App = () => {
   return (
     <div>
-      <Header />
+      <LandingSection />
+
+      <AboutSection />
+
+      <BoostYourLink />
     </div>
   );
 };

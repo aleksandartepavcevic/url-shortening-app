@@ -31,7 +31,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2rem;
+  padding: 3rem 0;
   min-height: 60px;
 `;
 
@@ -94,7 +94,7 @@ const Login = styled.button`
 const SignUp = styled.button`
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  foont-size: 1.4rem;
+  font-size: 1.4rem;
   color: white;
   background-color: hsl(180, 66%, 49%);
   padding: 0.5em 1.5em;
