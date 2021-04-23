@@ -1,6 +1,7 @@
 import React from 'react';
 import AboutSection from './components/AboutSection';
 import BoostYourLink from './components/BoostYourLink';
+import Footer from './components/Footer';
 import LandingSection from './components/LandingSection';
 import styled from 'styled-components';
 
@@ -11,8 +12,10 @@ const App = () => {
         <LandingSection />
 
         <AboutSection />
-
+    
         <BoostYourLink />
+    
+        <Footer />
       </Container>
     </Wrapper>
   );
