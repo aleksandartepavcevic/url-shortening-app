@@ -55,6 +55,13 @@ const Button = styled.button`
   border-radius: 10px;
   border: none;
   background-color: hsl(180, 66%, 49%);
+  transition: background-color 200ms ease;
+  cursor: pointer;
+
+  :hover {
+    background-color: hsl(180, 66%, 65%);
+    transition: background-color 200ms ease;
+  }
 
   @media only screen and (min-width: 768px) {
     flex-direction: row;

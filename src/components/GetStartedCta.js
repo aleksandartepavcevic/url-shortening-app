@@ -20,12 +20,12 @@ const GetStarted = styled.button`
   padding: 0.7em 1.5em;
   border: none;
   border-radius: 25px;
-  opacity: 1;
-  transition: opacity 200ms ease;
+  transition: all 500ms ease;
   cursor: pointer;
 
   :hover {
-    opacity: 0.7;
-    transition: opacity 200ms ease;
+    background-color: hsl(170, 66%, 49%);
+    box-shadow: 0px 2px 10px hsl(0, 0%, 50%);
+    transition: all 500ms ease;
   }
 `;
