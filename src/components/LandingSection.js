@@ -33,23 +33,28 @@ export default LandingSection;
 
 const Container = styled.div`
   padding: 0 2rem;
-  overflow: hidden;
-  z-index: 1000;
+
+  @media only screen and (min-width: 768px) {
+    padding: 0 10rem;
+  }
 `;
 
 const MainContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  padding-bottom: 15rem;
 
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 `;
 
 const Content = styled.div`
   flex: 1;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   order: 0;
 

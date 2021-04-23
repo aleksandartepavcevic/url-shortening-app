@@ -3,19 +3,31 @@ import AboutSection from './components/AboutSection';
 import BoostYourLink from './components/BoostYourLink';
 import Footer from './components/Footer';
 import LandingSection from './components/LandingSection';
+import styled from 'styled-components';
 
 const App = () => {
   return (
-    <div>
-      <LandingSection />
+    <Wrapper>
+      <Container>
+        <LandingSection />
 
-      <AboutSection />
-
-      <BoostYourLink />
-
-      <Footer />
-    </div>
+        <AboutSection />
+    
+        <BoostYourLink />
+    
+        <Footer />
+      </Container>
+    </Wrapper>
   );
 };
 
 export default App;
+
+const Container = styled.div`
+  max-width: 1920px;
+  margin: 0 auto;
+`;
+
+const Wrapper = styled.div`
+  overflow: hidden;
+`;

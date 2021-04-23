@@ -20,6 +20,11 @@ const Container = styled.div`
   flex-direction: column;
   background-color: hsl(257, 27%, 26%);
   margin-top: -17rem;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    padding: 4rem;
+  }
 `;
 
 const Input = styled.input`
@@ -33,6 +38,13 @@ const Input = styled.input`
   :focus {
     outline: none;
   }
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    flex: 4;
+    padding: 1.5rem;
+  }
 `;
 
 const Button = styled.button`
@@ -43,4 +55,9 @@ const Button = styled.button`
   border-radius: 10px;
   border: none;
   background-color: hsl(180, 66%, 49%);
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    flex: 1;
+  }
 `;

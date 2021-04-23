@@ -22,8 +22,14 @@ export default FullyCustomizable;
 const Container = styled.div`
   background-color: white;
   border-radius: 10px;
-  padding: 6rem 2rem 2rem 2rem;
+  padding: 6rem 2rem 4rem 2rem;
   position: relative;
+  margin-bottom: 7rem;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 const Icon = styled.div`

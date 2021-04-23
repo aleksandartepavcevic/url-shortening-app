@@ -22,9 +22,15 @@ export default BrandRecognition;
 const Container = styled.div`
   background-color: white;
   border-radius: 10px;
-  padding: 6rem 2rem 2rem 2rem;
+  padding: 6rem 2rem 4rem 2rem;
   position: relative;
   margin-bottom: 7rem;
+
+  @media only screen and (min-width: 768px) {
+    margin-right: 2rem;
+    margin-top: -5rem;
+    margin-bottom: 13rem;
+  }
 `;
 
 const Icon = styled.div`
