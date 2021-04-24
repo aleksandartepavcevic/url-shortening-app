@@ -6,7 +6,7 @@ const FullyCustomizable = () => {
   return (
     <Container>
       <Icon>
-        <img src={iconSrc} />
+        <img src={iconSrc} alt="" />
       </Icon>
       <Heading>Fully Customizable</Heading>
       <Paragraph>

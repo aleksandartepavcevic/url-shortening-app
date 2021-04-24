@@ -1,19 +1,27 @@
-import { hslToRgb } from '@material-ui/core';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const LinkShortened = () => {
+const LinkShortened = ({ data }) => {
   const [buttonState, setButtonState] = useState(false);
+  const link = React.createRef();
 
   const copyButton = () => {
     buttonState === false ? setButtonState(true) : setButtonState(false);
+    const text = link.current.value;
+    navigator.clipboard.writeText(text);
   };
 
   return (
     <Container>
-      <LinkInput>https://www.facebook.com/</LinkInput>
+      <LinkInput>{data.original_link}</LinkInput>
       <ShortenContainer>
-        <LinkShorten>https://www.fb.com/</LinkShorten>
+        <LinkShorten
+          ref={link}
+          value={data.full_short_link}
+          rows="1"
+          cols="30"
+          readOnly
+        />
         <Button buttonState={buttonState} onClick={copyButton}>
           {buttonState === false ? 'Copy' : 'Copied!'}
         </Button>
@@ -57,11 +65,16 @@ const LinkInput = styled.p`
   }
 `;
 
-const LinkShorten = styled.p`
+const LinkShorten = styled.textarea`
+  text-align: end;
   font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
   margin-top: 1rem;
   color: hsl(180, 66%, 49%);
+  resize: none;
+  border: none;
+  outline: none;
+  cursor: auto;
 
   @media only screen and (min-width: 768px) {
     margin-top: 0;
@@ -69,7 +82,6 @@ const LinkShorten = styled.p`
 `;
 
 const Button = styled.button`
-  width: 100%;
   margin-top: 1rem;
   font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;

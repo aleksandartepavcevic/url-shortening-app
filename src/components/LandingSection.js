@@ -3,7 +3,6 @@ import Header from './Header';
 import illustrationSrc from '../images/illustration-working.svg';
 import styled from 'styled-components';
 import GetStartedCta from './GetStartedCta';
-import LinkShorterer from './LinkShorterer';
 
 const LandingSection = () => {
   return (

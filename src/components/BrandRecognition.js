@@ -6,7 +6,7 @@ const BrandRecognition = () => {
   return (
     <Container>
       <Icon>
-        <img src={iconSrc} />
+        <img src={iconSrc} alt="" />
       </Icon>
       <Heading>Brand Recognition</Heading>
       <Paragraph>

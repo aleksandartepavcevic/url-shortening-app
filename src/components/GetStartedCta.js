@@ -24,8 +24,8 @@ const GetStarted = styled.button`
   cursor: pointer;
 
   :hover {
-    background-color: hsl(170, 66%, 49%);
-    box-shadow: 0px 2px 10px hsl(0, 0%, 50%);
+    background-color: hsl(180, 66%, 49%);
+    box-shadow: 0px 2px 10px hsl(180, 66%, 30%);
     transition: all 500ms ease;
   }
 `;

@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import LinkShorterer from './LinkShorterer';
 import styled from 'styled-components';
 import LinkShortened from './LinkShortened';
 import BrandRecognition from './BrandRecognition';
 import DetailedRecords from './DetailedRecords';
 import FullyCustomizable from './FullyCustomizable';
+import axios from 'axios';
 
 const AboutSection = () => {
+  const [db, setDb] = useState([]);
+  const [state, setState] = useState(0);
+
+  const changeLink = async (inputLink) => {
+    console.log('radi');
+
+    await axios
+      .get(`https://api.shrtco.de/v2/shorten?url=${inputLink}`)
+      .then((res) => {
+        const data = res.data.result;
+        const array = db.concat(data);
+        setDb(array);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <Container>
       <LinkShortererContainer>
-        <LinkShorterer />
-        <LinkShortened />
+        <LinkShorterer onChange={changeLink} />
+        {db.length !== 0 &&
+          db.map((link) => <LinkShortened data={link} key={link.code} />)}
       </LinkShortererContainer>
 
       <Heading>Advanced Statistics</Heading>

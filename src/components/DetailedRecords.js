@@ -6,7 +6,7 @@ const DetailedRecords = () => {
   return (
     <Container>
       <Icon>
-        <img src={iconSrc} />
+        <img src={iconSrc} alt="" />
       </Icon>
       <Heading>Detailed Records</Heading>
       <Paragraph>
