@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import LinkShorterer from './LinkShorterer';
 import styled from 'styled-components';
 import LinkShortened from './LinkShortened';
@@ -9,7 +9,6 @@ import axios from 'axios';
 
 const AboutSection = () => {
   const [db, setDb] = useState([]);
-  const [state, setState] = useState(0);
 
   const changeLink = async (inputLink) => {
     console.log('radi');
